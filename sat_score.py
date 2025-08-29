@@ -39,7 +39,7 @@ def get_rank():
     """Get rank of a student by SAT score"""
     name = input("Enter student name: ")
     if name not in students:
-        print("⚠️ Record not found.")
+        print("⚠ Record not found.")
         return
 
     sorted_students = sorted(students.items(), key=lambda x: x[1]["sat_score"], reverse=True)
@@ -130,12 +130,13 @@ def menu():
         elif choice == "8":
             save_to_json()
         elif choice == "9":
-            print("👋 Exiting program.")
+            print(" Exiting program.")
             break
         else:
-            print("⚠️ Invalid choice. Try again.")
+            print("⚠ Invalid choice. Try again.")
 
 
 if __name__ == "__main__":
  
     menu()
+
